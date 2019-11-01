@@ -34,6 +34,14 @@ namespace Business.Controllers
 
             return query.ToList();
         }
+
+        [HttpPost]
+        public void Post([FromBody] Restaurant restaurant)
+        {
+            _db.Restaurants.Add(restaurant);
+            _db.SaveChanges();
+
+        }
         [HttpPut]
         public void Put(int restaurantId, [FromBody] Restaurant restaurant)
         {
