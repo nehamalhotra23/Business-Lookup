@@ -28,14 +28,14 @@ namespace Business.Controllers
             {
                 int restIdInt = Int32.Parse(restaurantId);
                 query = query
-                    .Where(reviewRest => reviewRest.RestaurantId == restIdInt);
+                    .Where(reviewRestaurant => reviewRestaurant.RestaurantId == restIdInt);
             }
 
-            if (restaurantId != null)
+            if (reviewRestaurantId != null)
             {
-                int reviewRestIdint = Int32.Parse(restaurantId);
+                int reviewRestIdint = Int32.Parse(reviewRestaurantId);
                 query = query
-                    .Where(reviewRest => reviewRest.ReviewRestaurantId == reviewRestIdint);
+                    .Where(reviewRestaurant => reviewRestaurant.ReviewRestaurantId == reviewRestIdint);
             }
 
             return query.ToList();
