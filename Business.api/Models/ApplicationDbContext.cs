@@ -18,6 +18,7 @@ namespace Business.Models
         public DbSet<Restaurant> Restaurants { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Review> Reviews { get; set; }
+        public DbSet<ReviewRestaurant> ReviewRestaurants { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -53,6 +54,13 @@ namespace Business.Models
                     new Review { ReviewId = 3, UserId = 4, ShopId = 3, Blurb = "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero" }
                     
                 );
+            builder.Entity<ReviewRestaurant>()
+           .HasData(
+               new ReviewRestaurant { ReviewRestaurantId = 1, UserId = 1, RestaurantId = 1, BlurbRestaurant = "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero" },
+               new ReviewRestaurant { ReviewRestaurantId = 2, UserId = 3, RestaurantId = 2, BlurbRestaurant = "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero" },
+               new ReviewRestaurant { ReviewRestaurantId = 3, UserId = 4, RestaurantId = 3, BlurbRestaurant = "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero" }
+
+           );
         }
     }
 }

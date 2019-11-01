@@ -48,6 +48,27 @@ namespace Business.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "ReviewRestaurants",
+                columns: table => new
+                {
+                    ReviewRestaurantId = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    BlurbRestaurant = table.Column<string>(maxLength: 255, nullable: true),
+                    UserId = table.Column<int>(nullable: false),
+                    RestaurantId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ReviewRestaurants", x => x.ReviewRestaurantId);
+                    table.ForeignKey(
+                        name: "FK_ReviewRestaurants_Restaurants_RestaurantId",
+                        column: x => x.RestaurantId,
+                        principalTable: "Restaurants",
+                        principalColumn: "RestaurantId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Reviews",
                 columns: table => new
                 {
@@ -55,18 +76,11 @@ namespace Business.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Blurb = table.Column<string>(maxLength: 255, nullable: true),
                     UserId = table.Column<int>(nullable: false),
-                    ShopId = table.Column<int>(nullable: false),
-                    RestaurantId = table.Column<int>(nullable: true)
+                    ShopId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Reviews", x => x.ReviewId);
-                    table.ForeignKey(
-                        name: "FK_Reviews_Restaurants_RestaurantId",
-                        column: x => x.RestaurantId,
-                        principalTable: "Restaurants",
-                        principalColumn: "RestaurantId",
-                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Reviews_Shops_ShopId",
                         column: x => x.ShopId,
@@ -132,23 +146,38 @@ namespace Business.Migrations
                 values: new object[] { 6, "Devin" });
 
             migrationBuilder.InsertData(
-                table: "Reviews",
-                columns: new[] { "ReviewId", "Blurb", "RestaurantId", "ShopId", "UserId" },
-                values: new object[] { 1, "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero", null, 1, 3 });
+                table: "ReviewRestaurants",
+                columns: new[] { "ReviewRestaurantId", "BlurbRestaurant", "RestaurantId", "UserId" },
+                values: new object[] { 1, "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero", 1, 1 });
+
+            migrationBuilder.InsertData(
+                table: "ReviewRestaurants",
+                columns: new[] { "ReviewRestaurantId", "BlurbRestaurant", "RestaurantId", "UserId" },
+                values: new object[] { 2, "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero", 2, 3 });
+
+            migrationBuilder.InsertData(
+                table: "ReviewRestaurants",
+                columns: new[] { "ReviewRestaurantId", "BlurbRestaurant", "RestaurantId", "UserId" },
+                values: new object[] { 3, "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero", 3, 4 });
 
             migrationBuilder.InsertData(
                 table: "Reviews",
-                columns: new[] { "ReviewId", "Blurb", "RestaurantId", "ShopId", "UserId" },
-                values: new object[] { 2, "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero", null, 2, 3 });
+                columns: new[] { "ReviewId", "Blurb", "ShopId", "UserId" },
+                values: new object[] { 1, "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero", 1, 3 });
 
             migrationBuilder.InsertData(
                 table: "Reviews",
-                columns: new[] { "ReviewId", "Blurb", "RestaurantId", "ShopId", "UserId" },
-                values: new object[] { 3, "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero", null, 3, 4 });
+                columns: new[] { "ReviewId", "Blurb", "ShopId", "UserId" },
+                values: new object[] { 2, "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero", 2, 3 });
+
+            migrationBuilder.InsertData(
+                table: "Reviews",
+                columns: new[] { "ReviewId", "Blurb", "ShopId", "UserId" },
+                values: new object[] { 3, "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero", 3, 4 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Reviews_RestaurantId",
-                table: "Reviews",
+                name: "IX_ReviewRestaurants_RestaurantId",
+                table: "ReviewRestaurants",
                 column: "RestaurantId");
 
             migrationBuilder.CreateIndex(
@@ -164,6 +193,9 @@ namespace Business.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "ReviewRestaurants");
+
             migrationBuilder.DropTable(
                 name: "Reviews");
 

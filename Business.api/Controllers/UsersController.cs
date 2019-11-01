@@ -41,5 +41,19 @@ namespace Business.Controllers
             _db.SaveChanges();
 
         }
+        [HttpPut("{id}")]
+        public void Put(int id, [FromBody] User user)
+        {
+            user.UserId = id;
+            _db.Entry(user).State = EntityState.Modified;
+            _db.SaveChanges();
+        }
+        [HttpDelete("{id}")]
+        public void Delete(int id)
+        {
+            var userToDelete = _db.Users.FirstOrDefault(entry => entry.UserId == id);
+            _db.Users.Remove(userToDelete);
+            _db.SaveChanges();
+        }
     }
 }       
