@@ -24,17 +24,17 @@ namespace Business.Models
         {
             builder.Entity<Shop>()
                 .HasData(
-                    new Shop { ShopId = 1, ShopName = "Anna's Flower", ShopAddress = "stark" },
-                    new Shop { ShopId = 2, ShopName = "Angel's Donut and Ice Cream", ShopAddress = "164th street Vancover" },
-                    new Shop { ShopId = 3, ShopName = "Ace Hardware", ShopAddress = "122 ave portland 97236"}
+                    new Shop { ShopId = 1, ShopName = "Anna's Flower", Type = "flower Shop", ShopAddress = "stark" },
+                    new Shop { ShopId = 2, ShopName = "Angel's Donut and Ice Cream", Type = "Donut Shop", ShopAddress = "164th street Vancover" },
+                    new Shop { ShopId = 3, ShopName = "Ace Hardware", Type = "Hardware Tools", ShopAddress = "122 ave portland 97236"}
                     
                  );
 
             builder.Entity<Restaurant>()
                 .HasData(
-                    new Restaurant { RestaurantId = 1, RestaurantName = "Seerato", RestaurantAddress = "Downtown"  },
-                    new Restaurant { RestaurantId = 2, RestaurantName = "Portland City Grill", RestaurantAddress = "Downtown Portland" },
-                    new Restaurant { RestaurantId = 3, RestaurantName = "Deeny's", RestaurantAddress = "Stark" }
+                    new Restaurant { RestaurantId = 1, RestaurantName = "Seerato", Cuisines = "Italian", RestaurantAddress = "Downtown"  },
+                    new Restaurant { RestaurantId = 2, RestaurantName = "Portland City Grill", Cuisines = "American", RestaurantAddress = "Downtown Portland" },
+                    new Restaurant { RestaurantId = 3, RestaurantName = "Deeny's", Cuisines = "American", RestaurantAddress = "Stark" }
                     
                 );
 

@@ -13,6 +13,7 @@ namespace Business.Migrations
                     RestaurantId = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     RestaurantName = table.Column<string>(nullable: true),
+                    Cuisines = table.Column<string>(nullable: true),
                     RestaurantAddress = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -27,7 +28,8 @@ namespace Business.Migrations
                     ShopId = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     ShopName = table.Column<string>(nullable: true),
-                    ShopAddress = table.Column<string>(nullable: true)
+                    ShopAddress = table.Column<string>(nullable: true),
+                    Type = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -97,33 +99,33 @@ namespace Business.Migrations
 
             migrationBuilder.InsertData(
                 table: "Restaurants",
-                columns: new[] { "RestaurantId", "RestaurantAddress", "RestaurantName" },
-                values: new object[] { 1, "Downtown", "Seerato" });
+                columns: new[] { "RestaurantId", "Cuisines", "RestaurantAddress", "RestaurantName" },
+                values: new object[] { 1, "Italian", "Downtown", "Seerato" });
 
             migrationBuilder.InsertData(
                 table: "Restaurants",
-                columns: new[] { "RestaurantId", "RestaurantAddress", "RestaurantName" },
-                values: new object[] { 2, "Downtown Portland", "Portland City Grill" });
+                columns: new[] { "RestaurantId", "Cuisines", "RestaurantAddress", "RestaurantName" },
+                values: new object[] { 2, "American", "Downtown Portland", "Portland City Grill" });
 
             migrationBuilder.InsertData(
                 table: "Restaurants",
-                columns: new[] { "RestaurantId", "RestaurantAddress", "RestaurantName" },
-                values: new object[] { 3, "Stark", "Deeny's" });
+                columns: new[] { "RestaurantId", "Cuisines", "RestaurantAddress", "RestaurantName" },
+                values: new object[] { 3, "American", "Stark", "Deeny's" });
 
             migrationBuilder.InsertData(
                 table: "Shops",
-                columns: new[] { "ShopId", "ShopAddress", "ShopName" },
-                values: new object[] { 1, "stark", "Anna's Flower" });
+                columns: new[] { "ShopId", "ShopAddress", "ShopName", "Type" },
+                values: new object[] { 1, "stark", "Anna's Flower", "flower Shop" });
 
             migrationBuilder.InsertData(
                 table: "Shops",
-                columns: new[] { "ShopId", "ShopAddress", "ShopName" },
-                values: new object[] { 2, "164th street Vancover", "Angel's Donut and Ice Cream" });
+                columns: new[] { "ShopId", "ShopAddress", "ShopName", "Type" },
+                values: new object[] { 2, "164th street Vancover", "Angel's Donut and Ice Cream", "Donut Shop" });
 
             migrationBuilder.InsertData(
                 table: "Shops",
-                columns: new[] { "ShopId", "ShopAddress", "ShopName" },
-                values: new object[] { 3, "122 ave portland 97236", "Ace Hardware" });
+                columns: new[] { "ShopId", "ShopAddress", "ShopName", "Type" },
+                values: new object[] { 3, "122 ave portland 97236", "Ace Hardware", "Hardware Tools" });
 
             migrationBuilder.InsertData(
                 table: "Users",

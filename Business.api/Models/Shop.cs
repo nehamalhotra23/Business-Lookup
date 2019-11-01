@@ -10,6 +10,7 @@ namespace Business.Models
 
         public string ShopName { get; set; }
         public string ShopAddress { get; set; }
+        public string Type { get; set; }
         public int ShopId { get; set; }
         public  ICollection<Review> Reviews { get; }
     }

@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Business.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20191101203624_initial")]
+    [Migration("20191101232041_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -22,6 +22,8 @@ namespace Business.Migrations
                     b.Property<int>("RestaurantId")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<string>("Cuisines");
+
                     b.Property<string>("RestaurantAddress");
 
                     b.Property<string>("RestaurantName");
@@ -34,18 +36,21 @@ namespace Business.Migrations
                         new
                         {
                             RestaurantId = 1,
+                            Cuisines = "Italian",
                             RestaurantAddress = "Downtown",
                             RestaurantName = "Seerato"
                         },
                         new
                         {
                             RestaurantId = 2,
+                            Cuisines = "American",
                             RestaurantAddress = "Downtown Portland",
                             RestaurantName = "Portland City Grill"
                         },
                         new
                         {
                             RestaurantId = 3,
+                            Cuisines = "American",
                             RestaurantAddress = "Stark",
                             RestaurantName = "Deeny's"
                         });
@@ -174,6 +179,8 @@ namespace Business.Migrations
 
                     b.Property<string>("ShopName");
 
+                    b.Property<string>("Type");
+
                     b.HasKey("ShopId");
 
                     b.ToTable("Shops");
@@ -183,19 +190,22 @@ namespace Business.Migrations
                         {
                             ShopId = 1,
                             ShopAddress = "stark",
-                            ShopName = "Anna's Flower"
+                            ShopName = "Anna's Flower",
+                            Type = "flower Shop"
                         },
                         new
                         {
                             ShopId = 2,
                             ShopAddress = "164th street Vancover",
-                            ShopName = "Angel's Donut and Ice Cream"
+                            ShopName = "Angel's Donut and Ice Cream",
+                            Type = "Donut Shop"
                         },
                         new
                         {
                             ShopId = 3,
                             ShopAddress = "122 ave portland 97236",
-                            ShopName = "Ace Hardware"
+                            ShopName = "Ace Hardware",
+                            Type = "Hardware Tools"
                         });
                 });
 

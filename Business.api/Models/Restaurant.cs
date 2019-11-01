@@ -9,6 +9,7 @@ namespace Business.Models
         }
 
         public string RestaurantName { get; set; }
+        public string Cuisines { get; set; }
         public int RestaurantId { get; set; }
         public string RestaurantAddress { get; set; }
 
