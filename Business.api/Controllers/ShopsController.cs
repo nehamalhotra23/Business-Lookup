@@ -21,7 +21,7 @@ namespace Business.Controllers
 
        
         [HttpGet]
-        public ActionResult<IEnumerable<Shop>> Get()
+        public ActionResult<IEnumerable<Shop>> Get(string shopName)
         {
             var query = _db.Shops.AsQueryable();
 
