@@ -13,6 +13,6 @@ namespace Business.Models
         public int UserId { get; set; }
         [Required]
         public int ShopId { get; set; }
-        public int RestaurantId { get; set; }
+    
     }
 }
