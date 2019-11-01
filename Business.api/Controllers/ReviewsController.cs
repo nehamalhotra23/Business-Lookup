@@ -40,5 +40,28 @@ namespace Business.Controllers
 
             return query.ToList();
         }
+
+        [HttpPost]
+        public void Post([FromBody] Review review)
+        {
+            _db.Reviews.Add(review);
+            _db.SaveChanges();
+
+        }
+        [HttpPut("{id}")]
+        public void Put(int id, [FromBody] Review review)
+        {
+            review.ReviewId = id;
+            _db.Entry(review).State = EntityState.Modified;
+            _db.SaveChanges();
+
+        }
+        [HttpDelete("{id}")]
+        public void Delete(int id)
+        {
+            var reviewToDelete = _db.Reviews.FirstOrDefault(entry => entry.ReviewId == id);
+            _db.Reviews.Remove(reviewToDelete);
+            _db.SaveChanges();
+        }
     }
 }
