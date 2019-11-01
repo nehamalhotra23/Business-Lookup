@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Business.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20191101190007_initial")]
+    [Migration("20191101203624_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -34,20 +34,20 @@ namespace Business.Migrations
                         new
                         {
                             RestaurantId = 1,
-                            RestaurantAddress = "30th street",
-                            RestaurantName = "USA"
+                            RestaurantAddress = "Downtown",
+                            RestaurantName = "Seerato"
                         },
                         new
                         {
                             RestaurantId = 2,
-                            RestaurantAddress = "20th Street",
-                            RestaurantName = "France"
+                            RestaurantAddress = "Downtown Portland",
+                            RestaurantName = "Portland City Grill"
                         },
                         new
                         {
                             RestaurantId = 3,
-                            RestaurantAddress = "40th street",
-                            RestaurantName = "Italy"
+                            RestaurantAddress = "Stark",
+                            RestaurantName = "Deeny's"
                         });
                 });
 
@@ -75,22 +75,36 @@ namespace Business.Migrations
                         new
                         {
                             ReviewId = 1,
-                            Blurb = "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero",
+                            Blurb = "Susie was AWESOME!!!! I came in last minute for a memorial service with a holiday weekend in two days. Not only did she get it done but her idea for the bunches turned out great!!!!.",
                             ShopId = 1,
-                            UserId = 3
+                            UserId = 1
                         },
                         new
                         {
                             ReviewId = 2,
-                            Blurb = "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero",
+                            Blurb = "Perfect donuts. Light and fluffy perfect evenly distributed glaze. I love just a classic glazed donut but had their apple fritter recently and it was heavenly. The coffee goes perfectly with the donuts. Great shop to hang out/work in, decent WiFi, not too loud so it's easy to focus.",
                             ShopId = 2,
-                            UserId = 3
+                            UserId = 2
                         },
                         new
                         {
                             ReviewId = 3,
                             Blurb = "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero",
                             ShopId = 3,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            ReviewId = 4,
+                            Blurb = "Susie was AWESOME!!!! I came in last minute for a memorial service with a holiday weekend in two days. Not only did she get it done but her idea for the bunches turned out great!!!!.",
+                            ShopId = 2,
+                            UserId = 5
+                        },
+                        new
+                        {
+                            ReviewId = 5,
+                            Blurb = "Susie was AWESOME!!!! I came in last minute for a memorial service with a holiday weekend in two days. Not only did she get it done but her idea for the bunches turned out great!!!!.",
+                            ShopId = 2,
                             UserId = 4
                         });
                 });
@@ -117,23 +131,37 @@ namespace Business.Migrations
                         new
                         {
                             ReviewRestaurantId = 1,
-                            BlurbRestaurant = "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero",
+                            BlurbRestaurant = "One of my favorite places to dine in Portland.  The staff, especially Fernando, who always remembers us, is extremely friendly and attentive.  I've never had less than an amazing meal here. The atmosphere is beautiful, and they have a great bar area along with outside seating and a large space for a private party.",
                             RestaurantId = 1,
                             UserId = 1
                         },
                         new
                         {
                             ReviewRestaurantId = 2,
-                            BlurbRestaurant = "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero",
+                            BlurbRestaurant = "We had the best server! I wish I remembered his name. The view is amazing, the food is delicious, the service is great. It is an amazing place to go. I've gone here both dressed up and more casual depending on the occasion. It's such a great place!",
                             RestaurantId = 2,
                             UserId = 3
                         },
                         new
                         {
                             ReviewRestaurantId = 3,
-                            BlurbRestaurant = "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero",
+                            BlurbRestaurant = "I've been enjoying the food from this establishment since I was a young boy, and I'm 36yrs old now. Recently revisited them for a to-go order and couldn't be happier with the quality, quantity, or service. Canton Grill, y'all are AWESOME and I plan on being one of your customers as long as I can! Thanks :-)",
                             RestaurantId = 3,
                             UserId = 4
+                        },
+                        new
+                        {
+                            ReviewRestaurantId = 4,
+                            BlurbRestaurant = "I've been enjoying the food from this establishment since I was a young boy, and I'm 36yrs old now. Recently revisited them for a to-go order and couldn't be happier with the quality, quantity, or service. Canton Grill, y'all are AWESOME and I plan on being one of your customers as long as I can! Thanks :-)",
+                            RestaurantId = 3,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            ReviewRestaurantId = 5,
+                            BlurbRestaurant = "One of my favorite places to dine in Portland.  The staff, especially Fernando, who always remembers us, is extremely friendly and attentive.  I've never had less than an amazing meal here. The atmosphere is beautiful, and they have a great bar area along with outside seating and a large space for a private party.",
+                            RestaurantId = 1,
+                            UserId = 5
                         });
                 });
 
@@ -155,19 +183,19 @@ namespace Business.Migrations
                         {
                             ShopId = 1,
                             ShopAddress = "stark",
-                            ShopName = "Flower"
+                            ShopName = "Anna's Flower"
                         },
                         new
                         {
                             ShopId = 2,
-                            ShopAddress = "division",
-                            ShopName = "Pet"
+                            ShopAddress = "164th street Vancover",
+                            ShopName = "Angel's Donut and Ice Cream"
                         },
                         new
                         {
                             ShopId = 3,
-                            ShopAddress = "Sellwoood",
-                            ShopName = "Grocery"
+                            ShopAddress = "122 ave portland 97236",
+                            ShopName = "Ace Hardware"
                         });
                 });
 
@@ -186,23 +214,28 @@ namespace Business.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = 3,
+                            UserId = 1,
                             UserName = "Dom"
                         },
                         new
                         {
-                            UserId = 4,
+                            UserId = 2,
                             UserName = "Jen"
                         },
                         new
                         {
-                            UserId = 5,
+                            UserId = 3,
                             UserName = "Anita"
                         },
                         new
                         {
-                            UserId = 6,
+                            UserId = 4,
                             UserName = "Devin"
+                        },
+                        new
+                        {
+                            UserId = 5,
+                            UserName = "Kira"
                         });
                 });
 

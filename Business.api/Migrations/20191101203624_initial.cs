@@ -98,82 +98,107 @@ namespace Business.Migrations
             migrationBuilder.InsertData(
                 table: "Restaurants",
                 columns: new[] { "RestaurantId", "RestaurantAddress", "RestaurantName" },
-                values: new object[] { 1, "30th street", "USA" });
+                values: new object[] { 1, "Downtown", "Seerato" });
 
             migrationBuilder.InsertData(
                 table: "Restaurants",
                 columns: new[] { "RestaurantId", "RestaurantAddress", "RestaurantName" },
-                values: new object[] { 2, "20th Street", "France" });
+                values: new object[] { 2, "Downtown Portland", "Portland City Grill" });
 
             migrationBuilder.InsertData(
                 table: "Restaurants",
                 columns: new[] { "RestaurantId", "RestaurantAddress", "RestaurantName" },
-                values: new object[] { 3, "40th street", "Italy" });
+                values: new object[] { 3, "Stark", "Deeny's" });
 
             migrationBuilder.InsertData(
                 table: "Shops",
                 columns: new[] { "ShopId", "ShopAddress", "ShopName" },
-                values: new object[] { 1, "stark", "Flower" });
+                values: new object[] { 1, "stark", "Anna's Flower" });
 
             migrationBuilder.InsertData(
                 table: "Shops",
                 columns: new[] { "ShopId", "ShopAddress", "ShopName" },
-                values: new object[] { 2, "division", "Pet" });
+                values: new object[] { 2, "164th street Vancover", "Angel's Donut and Ice Cream" });
 
             migrationBuilder.InsertData(
                 table: "Shops",
                 columns: new[] { "ShopId", "ShopAddress", "ShopName" },
-                values: new object[] { 3, "Sellwoood", "Grocery" });
+                values: new object[] { 3, "122 ave portland 97236", "Ace Hardware" });
 
             migrationBuilder.InsertData(
                 table: "Users",
                 columns: new[] { "UserId", "UserName" },
-                values: new object[] { 3, "Dom" });
+                values: new object[] { 1, "Dom" });
 
             migrationBuilder.InsertData(
                 table: "Users",
                 columns: new[] { "UserId", "UserName" },
-                values: new object[] { 4, "Jen" });
+                values: new object[] { 2, "Jen" });
 
             migrationBuilder.InsertData(
                 table: "Users",
                 columns: new[] { "UserId", "UserName" },
-                values: new object[] { 5, "Anita" });
+                values: new object[] { 3, "Anita" });
 
             migrationBuilder.InsertData(
                 table: "Users",
                 columns: new[] { "UserId", "UserName" },
-                values: new object[] { 6, "Devin" });
+                values: new object[] { 4, "Devin" });
+
+            migrationBuilder.InsertData(
+                table: "Users",
+                columns: new[] { "UserId", "UserName" },
+                values: new object[] { 5, "Kira" });
 
             migrationBuilder.InsertData(
                 table: "ReviewRestaurants",
                 columns: new[] { "ReviewRestaurantId", "BlurbRestaurant", "RestaurantId", "UserId" },
-                values: new object[] { 1, "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero", 1, 1 });
+                values: new object[] { 1, "One of my favorite places to dine in Portland.  The staff, especially Fernando, who always remembers us, is extremely friendly and attentive.  I've never had less than an amazing meal here. The atmosphere is beautiful, and they have a great bar area along with outside seating and a large space for a private party.", 1, 1 });
 
             migrationBuilder.InsertData(
                 table: "ReviewRestaurants",
                 columns: new[] { "ReviewRestaurantId", "BlurbRestaurant", "RestaurantId", "UserId" },
-                values: new object[] { 2, "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero", 2, 3 });
+                values: new object[] { 5, "One of my favorite places to dine in Portland.  The staff, especially Fernando, who always remembers us, is extremely friendly and attentive.  I've never had less than an amazing meal here. The atmosphere is beautiful, and they have a great bar area along with outside seating and a large space for a private party.", 1, 5 });
 
             migrationBuilder.InsertData(
                 table: "ReviewRestaurants",
                 columns: new[] { "ReviewRestaurantId", "BlurbRestaurant", "RestaurantId", "UserId" },
-                values: new object[] { 3, "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero", 3, 4 });
+                values: new object[] { 2, "We had the best server! I wish I remembered his name. The view is amazing, the food is delicious, the service is great. It is an amazing place to go. I've gone here both dressed up and more casual depending on the occasion. It's such a great place!", 2, 3 });
+
+            migrationBuilder.InsertData(
+                table: "ReviewRestaurants",
+                columns: new[] { "ReviewRestaurantId", "BlurbRestaurant", "RestaurantId", "UserId" },
+                values: new object[] { 3, "I've been enjoying the food from this establishment since I was a young boy, and I'm 36yrs old now. Recently revisited them for a to-go order and couldn't be happier with the quality, quantity, or service. Canton Grill, y'all are AWESOME and I plan on being one of your customers as long as I can! Thanks :-)", 3, 4 });
+
+            migrationBuilder.InsertData(
+                table: "ReviewRestaurants",
+                columns: new[] { "ReviewRestaurantId", "BlurbRestaurant", "RestaurantId", "UserId" },
+                values: new object[] { 4, "I've been enjoying the food from this establishment since I was a young boy, and I'm 36yrs old now. Recently revisited them for a to-go order and couldn't be happier with the quality, quantity, or service. Canton Grill, y'all are AWESOME and I plan on being one of your customers as long as I can! Thanks :-)", 3, 2 });
 
             migrationBuilder.InsertData(
                 table: "Reviews",
                 columns: new[] { "ReviewId", "Blurb", "ShopId", "UserId" },
-                values: new object[] { 1, "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero", 1, 3 });
+                values: new object[] { 1, "Susie was AWESOME!!!! I came in last minute for a memorial service with a holiday weekend in two days. Not only did she get it done but her idea for the bunches turned out great!!!!.", 1, 1 });
 
             migrationBuilder.InsertData(
                 table: "Reviews",
                 columns: new[] { "ReviewId", "Blurb", "ShopId", "UserId" },
-                values: new object[] { 2, "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero", 2, 3 });
+                values: new object[] { 2, "Perfect donuts. Light and fluffy perfect evenly distributed glaze. I love just a classic glazed donut but had their apple fritter recently and it was heavenly. The coffee goes perfectly with the donuts. Great shop to hang out/work in, decent WiFi, not too loud so it's easy to focus.", 2, 2 });
 
             migrationBuilder.InsertData(
                 table: "Reviews",
                 columns: new[] { "ReviewId", "Blurb", "ShopId", "UserId" },
-                values: new object[] { 3, "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero", 3, 4 });
+                values: new object[] { 3, "t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero", 3, 3 });
+
+            migrationBuilder.InsertData(
+                table: "Reviews",
+                columns: new[] { "ReviewId", "Blurb", "ShopId", "UserId" },
+                values: new object[] { 5, "Susie was AWESOME!!!! I came in last minute for a memorial service with a holiday weekend in two days. Not only did she get it done but her idea for the bunches turned out great!!!!.", 2, 4 });
+
+            migrationBuilder.InsertData(
+                table: "Reviews",
+                columns: new[] { "ReviewId", "Blurb", "ShopId", "UserId" },
+                values: new object[] { 4, "Susie was AWESOME!!!! I came in last minute for a memorial service with a holiday weekend in two days. Not only did she get it done but her idea for the bunches turned out great!!!!.", 2, 5 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_ReviewRestaurants_RestaurantId",
