@@ -11,6 +11,7 @@ namespace Business.Models
 
         public string RestaurantName { get; set; }
         public int RestaurantId { get; set; }
+        public string RestaurantAddress { get; set; }
 
         public ICollection<Review> Reviews { get; }
     }
