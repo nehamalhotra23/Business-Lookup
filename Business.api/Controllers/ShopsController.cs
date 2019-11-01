@@ -19,7 +19,7 @@ namespace Business.Controllers
             _db = db;
         }
 
-       
+
         [HttpGet]
         public ActionResult<IEnumerable<Shop>> Get(string shopName)
         {
@@ -57,4 +57,3 @@ namespace Business.Controllers
         }
     }
 }
-       

@@ -28,7 +28,7 @@ namespace Business.Controllers
             if (restaurantName != null)
             {
                 query = query
-                 
+
                   .Where(entry => entry.RestaurantName.ToLower().Replace(" ", "") == restaurantName.ToLower().Replace(" ", ""));
             }
 
@@ -57,4 +57,4 @@ namespace Business.Controllers
             _db.SaveChanges();
         }
     }
-}       
+}

@@ -8,6 +8,7 @@
 
 _This project is an API of local business i.e Shops and Restaurants. It provides information about the Name, Address and User Reviews on the Shops and Restaurants_
 
+
 ## Setup/Installation Requirements
 
 * _Git Clone https://github.com/nehamalhotra23/Business-Lookup.git_
