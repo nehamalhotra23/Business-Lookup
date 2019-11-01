@@ -3,7 +3,6 @@ namespace Business.Models
 {
     public class Restaurant
     {
-        // public double Rating {get; set;}
         public Restaurant()
         {
             this.Reviews = new HashSet<Review>();
