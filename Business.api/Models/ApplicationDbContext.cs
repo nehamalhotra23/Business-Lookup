@@ -24,17 +24,31 @@ namespace Business.Models
         {
             builder.Entity<Shop>()
                 .HasData(
-                    new Shop { ShopId = 1, ShopName = "Anna's Flower", Type = "flower Shop", ShopAddress = "stark" },
+                    new Shop { ShopId = 1, ShopName = "Anna's Flower", Type = "flower Shop", ShopAddress = "8480 SE Division St Powellhurst - Gilbert" },
                     new Shop { ShopId = 2, ShopName = "Angel's Donut and Ice Cream", Type = "Donut Shop", ShopAddress = "164th street Vancover" },
-                    new Shop { ShopId = 3, ShopName = "Ace Hardware", Type = "Hardware Tools", ShopAddress = "122 ave portland 97236" }
+                    new Shop { ShopId = 3, ShopName = "Ace Hardware", Type = "Hardware Tools", ShopAddress = "122 ave portland 97236" },
+                    new Shop { ShopId = 4, ShopName = "Lake O Flower", Type = "flower Shop", ShopAddress = "397 N State St Lake Oswego,OR 97034" },
+                    new Shop { ShopId = 5, ShopName = "Target", Type = "department store", ShopAddress = "9800 SE Washington St" },
+                     new Shop { ShopId = 6, ShopName = "Home Depot", Type = "hardware store", ShopAddress = "10120 SE Washington St" },
+                    new Shop { ShopId = 7, ShopName = "Fred Meyer", Type = "Grocery Store", ShopAddress = "14700 SE Division st" },
+                    new Shop { ShopId = 8, ShopName = "New Season", Type = "Grocery Store", ShopAddress = "4034 SE Hawthorne Blvd portland 97214" },
+                    new Shop { ShopId = 9, ShopName = "Little Otsu", Type = "Gift Shop", ShopAddress = "3225 SE Division St" },
+                    new Shop { ShopId = 10, ShopName = "Bi Mart", Type = "Department Store", ShopAddress = "12321 NE Halsey St" }
 
                  );
 
             builder.Entity<Restaurant>()
                 .HasData(
-                    new Restaurant { RestaurantId = 1, RestaurantName = "Seerato", Cuisines = "Italian", RestaurantAddress = "Downtown" },
-                    new Restaurant { RestaurantId = 2, RestaurantName = "Portland City Grill", Cuisines = "American", RestaurantAddress = "Downtown Portland" },
-                    new Restaurant { RestaurantId = 3, RestaurantName = "Deeny's", Cuisines = "American", RestaurantAddress = "Stark" }
+                    new Restaurant { RestaurantId = 1, RestaurantName = "Seerato", Cuisines = "Italian", RestaurantAddress = "2112 NW Kearney St Alphabet Distric" },
+                    new Restaurant { RestaurantId = 2, RestaurantName = "Portland City Grill", Cuisines = "American", RestaurantAddress = "111 5th Ave 30th Floor Portland OR 97204" },
+                    new Restaurant { RestaurantId = 3, RestaurantName = "Deeny's", Cuisines = "American", RestaurantAddress = "425 NE Hassalo St Lloyd Distric" },
+                    new Restaurant { RestaurantId = 4, RestaurantName = "Oliver's Cafe", Cuisines = "Breakfast and brunch", RestaurantAddress = "8931 SE Foster Rd, Ste 105, Portland" },
+                    new Restaurant { RestaurantId = 5, RestaurantName = "Big's Chicken", Cuisines = "American", RestaurantAddress = "4606 NE Glisan St. Portland 97213" },
+                    new Restaurant { RestaurantId = 6, RestaurantName = "Tortilleria Y Tienda De Leon's", Cuisines = "Mexican", RestaurantAddress = "162233 NE Glisan St Portland 97230" },
+                    new Restaurant { RestaurantId = 7, RestaurantName = "The Waffle Window", Cuisines = "Breakfast Brunch & Waffles", RestaurantAddress = "3610 SE Hawthorne blvd Portland 97214" },
+                    new Restaurant { RestaurantId = 8, RestaurantName = "Don Camaron", Cuisines = "Mexican", RestaurantAddress = "Downtown Portland" },
+                    new Restaurant { RestaurantId = 9, RestaurantName = "Deeny's", Cuisines = "American", RestaurantAddress = "16246 SE Stark St Portland 97233" },
+                     new Restaurant { RestaurantId = 10, RestaurantName = "Don Pedro's", Cuisines = "Mexican", RestaurantAddress = "615 SE 122nd Ave Portland 97233" }
 
                 );
 

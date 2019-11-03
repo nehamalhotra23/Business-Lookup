@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Business.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20191101232041_initial")]
+    [Migration("20191103231125_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -37,22 +37,71 @@ namespace Business.Migrations
                         {
                             RestaurantId = 1,
                             Cuisines = "Italian",
-                            RestaurantAddress = "Downtown",
+                            RestaurantAddress = "2112 NW Kearney St Alphabet Distric",
                             RestaurantName = "Seerato"
                         },
                         new
                         {
                             RestaurantId = 2,
                             Cuisines = "American",
-                            RestaurantAddress = "Downtown Portland",
+                            RestaurantAddress = "111 5th Ave 30th Floor Portland OR 97204",
                             RestaurantName = "Portland City Grill"
                         },
                         new
                         {
                             RestaurantId = 3,
                             Cuisines = "American",
-                            RestaurantAddress = "Stark",
+                            RestaurantAddress = "425 NE Hassalo St Lloyd Distric",
                             RestaurantName = "Deeny's"
+                        },
+                        new
+                        {
+                            RestaurantId = 4,
+                            Cuisines = "Breakfast and brunch",
+                            RestaurantAddress = "8931 SE Foster Rd, Ste 105, Portland",
+                            RestaurantName = "Oliver's Cafe"
+                        },
+                        new
+                        {
+                            RestaurantId = 5,
+                            Cuisines = "American",
+                            RestaurantAddress = "4606 NE Glisan St. Portland 97213",
+                            RestaurantName = "Big's Chicken"
+                        },
+                        new
+                        {
+                            RestaurantId = 6,
+                            Cuisines = "Mexican",
+                            RestaurantAddress = "162233 NE Glisan St Portland 97230",
+                            RestaurantName = "Tortilleria Y Tienda De Leon's"
+                        },
+                        new
+                        {
+                            RestaurantId = 7,
+                            Cuisines = "Breakfast Brunch & Waffles",
+                            RestaurantAddress = "3610 SE Hawthorne blvd Portland 97214",
+                            RestaurantName = "The Waffle Window"
+                        },
+                        new
+                        {
+                            RestaurantId = 8,
+                            Cuisines = "Mexican",
+                            RestaurantAddress = "Downtown Portland",
+                            RestaurantName = "Don Camaron"
+                        },
+                        new
+                        {
+                            RestaurantId = 9,
+                            Cuisines = "American",
+                            RestaurantAddress = "16246 SE Stark St Portland 97233",
+                            RestaurantName = "Deeny's"
+                        },
+                        new
+                        {
+                            RestaurantId = 10,
+                            Cuisines = "Mexican",
+                            RestaurantAddress = "615 SE 122nd Ave Portland 97233",
+                            RestaurantName = "Don Pedro's"
                         });
                 });
 
@@ -189,7 +238,7 @@ namespace Business.Migrations
                         new
                         {
                             ShopId = 1,
-                            ShopAddress = "stark",
+                            ShopAddress = "8480 SE Division St Powellhurst - Gilbert",
                             ShopName = "Anna's Flower",
                             Type = "flower Shop"
                         },
@@ -206,6 +255,55 @@ namespace Business.Migrations
                             ShopAddress = "122 ave portland 97236",
                             ShopName = "Ace Hardware",
                             Type = "Hardware Tools"
+                        },
+                        new
+                        {
+                            ShopId = 4,
+                            ShopAddress = "397 N State St Lake Oswego,OR 97034",
+                            ShopName = "Lake O Flower",
+                            Type = "flower Shop"
+                        },
+                        new
+                        {
+                            ShopId = 5,
+                            ShopAddress = "9800 SE Washington St",
+                            ShopName = "Target",
+                            Type = "department store"
+                        },
+                        new
+                        {
+                            ShopId = 6,
+                            ShopAddress = "10120 SE Washington St",
+                            ShopName = "Home Depot",
+                            Type = "hardware store"
+                        },
+                        new
+                        {
+                            ShopId = 7,
+                            ShopAddress = "14700 SE Division st",
+                            ShopName = "Fred Meyer",
+                            Type = "Grocery Store"
+                        },
+                        new
+                        {
+                            ShopId = 8,
+                            ShopAddress = "4034 SE Hawthorne Blvd portland 97214",
+                            ShopName = "New Season",
+                            Type = "Grocery Store"
+                        },
+                        new
+                        {
+                            ShopId = 9,
+                            ShopAddress = "3225 SE Division St",
+                            ShopName = "Little Otsu",
+                            Type = "Gift Shop"
+                        },
+                        new
+                        {
+                            ShopId = 10,
+                            ShopAddress = "12321 NE Halsey St",
+                            ShopName = "Bi Mart",
+                            Type = "Department Store"
                         });
                 });
 

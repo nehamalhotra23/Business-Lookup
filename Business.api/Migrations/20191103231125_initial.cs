@@ -100,22 +100,87 @@ namespace Business.Migrations
             migrationBuilder.InsertData(
                 table: "Restaurants",
                 columns: new[] { "RestaurantId", "Cuisines", "RestaurantAddress", "RestaurantName" },
-                values: new object[] { 1, "Italian", "Downtown", "Seerato" });
+                values: new object[] { 1, "Italian", "2112 NW Kearney St Alphabet Distric", "Seerato" });
 
             migrationBuilder.InsertData(
                 table: "Restaurants",
                 columns: new[] { "RestaurantId", "Cuisines", "RestaurantAddress", "RestaurantName" },
-                values: new object[] { 2, "American", "Downtown Portland", "Portland City Grill" });
+                values: new object[] { 2, "American", "111 5th Ave 30th Floor Portland OR 97204", "Portland City Grill" });
 
             migrationBuilder.InsertData(
                 table: "Restaurants",
                 columns: new[] { "RestaurantId", "Cuisines", "RestaurantAddress", "RestaurantName" },
-                values: new object[] { 3, "American", "Stark", "Deeny's" });
+                values: new object[] { 3, "American", "425 NE Hassalo St Lloyd Distric", "Deeny's" });
+
+            migrationBuilder.InsertData(
+                table: "Restaurants",
+                columns: new[] { "RestaurantId", "Cuisines", "RestaurantAddress", "RestaurantName" },
+                values: new object[] { 4, "Breakfast and brunch", "8931 SE Foster Rd, Ste 105, Portland", "Oliver's Cafe" });
+
+            migrationBuilder.InsertData(
+                table: "Restaurants",
+                columns: new[] { "RestaurantId", "Cuisines", "RestaurantAddress", "RestaurantName" },
+                values: new object[] { 5, "American", "4606 NE Glisan St. Portland 97213", "Big's Chicken" });
+
+            migrationBuilder.InsertData(
+                table: "Restaurants",
+                columns: new[] { "RestaurantId", "Cuisines", "RestaurantAddress", "RestaurantName" },
+                values: new object[] { 6, "Mexican", "162233 NE Glisan St Portland 97230", "Tortilleria Y Tienda De Leon's" });
+
+            migrationBuilder.InsertData(
+                table: "Restaurants",
+                columns: new[] { "RestaurantId", "Cuisines", "RestaurantAddress", "RestaurantName" },
+                values: new object[] { 7, "Breakfast Brunch & Waffles", "3610 SE Hawthorne blvd Portland 97214", "The Waffle Window" });
+
+            migrationBuilder.InsertData(
+                table: "Restaurants",
+                columns: new[] { "RestaurantId", "Cuisines", "RestaurantAddress", "RestaurantName" },
+                values: new object[] { 8, "Mexican", "Downtown Portland", "Don Camaron" });
+
+            migrationBuilder.InsertData(
+                table: "Restaurants",
+                columns: new[] { "RestaurantId", "Cuisines", "RestaurantAddress", "RestaurantName" },
+                values: new object[] { 9, "American", "16246 SE Stark St Portland 97233", "Deeny's" });
+
+            migrationBuilder.InsertData(
+                table: "Restaurants",
+                columns: new[] { "RestaurantId", "Cuisines", "RestaurantAddress", "RestaurantName" },
+                values: new object[] { 10, "Mexican", "615 SE 122nd Ave Portland 97233", "Don Pedro's" });
 
             migrationBuilder.InsertData(
                 table: "Shops",
                 columns: new[] { "ShopId", "ShopAddress", "ShopName", "Type" },
-                values: new object[] { 1, "stark", "Anna's Flower", "flower Shop" });
+                values: new object[] { 10, "12321 NE Halsey St", "Bi Mart", "Department Store" });
+
+            migrationBuilder.InsertData(
+                table: "Shops",
+                columns: new[] { "ShopId", "ShopAddress", "ShopName", "Type" },
+                values: new object[] { 9, "3225 SE Division St", "Little Otsu", "Gift Shop" });
+
+            migrationBuilder.InsertData(
+                table: "Shops",
+                columns: new[] { "ShopId", "ShopAddress", "ShopName", "Type" },
+                values: new object[] { 8, "4034 SE Hawthorne Blvd portland 97214", "New Season", "Grocery Store" });
+
+            migrationBuilder.InsertData(
+                table: "Shops",
+                columns: new[] { "ShopId", "ShopAddress", "ShopName", "Type" },
+                values: new object[] { 7, "14700 SE Division st", "Fred Meyer", "Grocery Store" });
+
+            migrationBuilder.InsertData(
+                table: "Shops",
+                columns: new[] { "ShopId", "ShopAddress", "ShopName", "Type" },
+                values: new object[] { 6, "10120 SE Washington St", "Home Depot", "hardware store" });
+
+            migrationBuilder.InsertData(
+                table: "Shops",
+                columns: new[] { "ShopId", "ShopAddress", "ShopName", "Type" },
+                values: new object[] { 3, "122 ave portland 97236", "Ace Hardware", "Hardware Tools" });
+
+            migrationBuilder.InsertData(
+                table: "Shops",
+                columns: new[] { "ShopId", "ShopAddress", "ShopName", "Type" },
+                values: new object[] { 4, "397 N State St Lake Oswego,OR 97034", "Lake O Flower", "flower Shop" });
 
             migrationBuilder.InsertData(
                 table: "Shops",
@@ -125,7 +190,17 @@ namespace Business.Migrations
             migrationBuilder.InsertData(
                 table: "Shops",
                 columns: new[] { "ShopId", "ShopAddress", "ShopName", "Type" },
-                values: new object[] { 3, "122 ave portland 97236", "Ace Hardware", "Hardware Tools" });
+                values: new object[] { 1, "8480 SE Division St Powellhurst - Gilbert", "Anna's Flower", "flower Shop" });
+
+            migrationBuilder.InsertData(
+                table: "Shops",
+                columns: new[] { "ShopId", "ShopAddress", "ShopName", "Type" },
+                values: new object[] { 5, "9800 SE Washington St", "Target", "department store" });
+
+            migrationBuilder.InsertData(
+                table: "Users",
+                columns: new[] { "UserId", "UserName" },
+                values: new object[] { 4, "Devin" });
 
             migrationBuilder.InsertData(
                 table: "Users",
@@ -141,11 +216,6 @@ namespace Business.Migrations
                 table: "Users",
                 columns: new[] { "UserId", "UserName" },
                 values: new object[] { 3, "Anita" });
-
-            migrationBuilder.InsertData(
-                table: "Users",
-                columns: new[] { "UserId", "UserName" },
-                values: new object[] { 4, "Devin" });
 
             migrationBuilder.InsertData(
                 table: "Users",
